@@ -1,0 +1,58 @@
+@import "reset";
+@import 'fonts';
+@import 'header';
+@import 'home';
+@import 'destination';
+@import 'crew';
+@import 'technology';
+
+$black-color: #0B0D17;
+$white-color: #ffffff;
+$accent-color: #D0D6F9;
+
+body {
+    background-color: $black-color;
+    min-height: 100vh;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: $white-color;
+    position: relative;
+    overflow-x: hidden;
+    line-height: 1.5;
+    font-family: $text-font-Barlow-regular;
+}
+
+button {
+    font: inherit;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 180px 150px 150px 150px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom center;
+    background-color: $black-color;
+    @media only screen and (max-width: 1200px)  {
+        padding: 130px 100px;
+    }
+    @media only screen and (max-width: 1000px)  {
+        padding: 0 50px;
+    }
+    @media only screen and (max-width: 560px)  {
+        padding: 0 30px;
+    }
+}
+
+
+
+
+
+
+
+
+    

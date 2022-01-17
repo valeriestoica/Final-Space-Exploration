@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Space | Technology - Lauch Vehicle</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src='./assets/shared/logo.svg' alt='Space logo'/>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a class='navLink' href="./index.html"><span class='span-number'>00</span> Home</a></li>
+        <li><a class='navLink' href="./destination-moon.html"><span class='span-number'>01</span> Destination</a></li>
+        <li><a class='navLink' href="crew.html"><span class='span-number'>02</span> Crew</a></li>
+        <li><a class='navLink active' href="technology.html"><span class='span-number'>03</span> Technology</a></li>
+      </ul>
+    </nav>
+
+    <div id="menuToggle">
+      <!-- <input type="checkbox" /> -->
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  </header>
+
+  <section class="technology">
+    <h1 class='fs-h5 uppercase pageTitle'> <span class='span-number'>03 </span>Space launch 101</h1>
+
+    <div>
+      <img class='landscape-img' src='assets/technology/image-launch-vehicle-landscape.jpg' alt=''Space website - technology launch vehicle image/>
+    </div>
+
+
+    <div>
+      <div class='container'>
+  
+
+        <div class='container-inner'>
+          <nav>
+            <ul>
+              <li class='active nav-tech1'>1</li>
+              <li class='nav-tech2'>2</li>
+              <li class='nav-tech3'>3</li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class='fs-16px uppercase title'>The terminology...</h2>
+            <h3 class='fs-h3 uppercase subtitle'>Launch vehicle</h3>
+            <p class='fs-18px text'>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+              payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+              WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+              it's quite an awe-inspiring sight on the launch pad!
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+  
+      <div class='container'>
+      <img class='portrait-img' src='assets/technology/image-launch-vehicle-portrait.jpg' alt='x'/>
+      </div> 
+    </div>
+ 
+ </section>
+
+
+ <script src="app.js"></script> 
+ <script>
+
+   
+const changeContentTech = () => {
+    const title = document.querySelector('.title');
+    const subtitle = document.querySelector('.subtitle');
+    const text = document.querySelector('.text');
+
+    const mobileImg = document.querySelector('.landscape-img');
+    const desktopImg = document.querySelector('.portrait-img');
+
+
+    // technology page
+    const navTech1 = document.querySelector('.nav-tech1');
+    const navTech2 = document.querySelector('.nav-tech2');
+    const navTech3 = document.querySelector('.nav-tech3');
+
+    navTech1.addEventListener('click', () => {
+        title.textContent = 'The terminology...';
+        subtitle.textContent = 'Launch vehicle';
+        text.textContent = `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!`;
+        mobileImg.src = 'assets/technology/image-launch-vehicle-landscape.jpg';
+        desktopImg .src = 'assets/technology/image-launch-vehicle-portrait.jpg';
+        navTech1.classList.add("active");
+        navTech2.classList.remove("active");
+        navTech3.classList.remove("active");
+    })
+
+    navTech2.addEventListener('click', () => {
+        title.textContent = 'The terminology...';
+        subtitle.textContent = 'Spaceport';
+        text.textContent = `A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.`;
+        mobileImg.src = 'assets/technology/image-spaceport-landscape.jpg';
+        desktopImg .src = 'assets/technology/image-spaceport-portrait.jpg';
+        navTech2.classList.add("active");
+        navTech1.classList.remove("active");
+        navTech3.classList.remove("active");
+    })
+
+    navTech3.addEventListener('click', () => {
+        title.textContent = 'The terminology...';
+        subtitle.textContent = ' Space capsule';
+        text.textContent = `  A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+  capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+  you'll spend your time during the flight. It includes a space gym, cinema, 
+  and plenty of other activities to keep you entertained.`;
+      mobileImg.src = 'assets/technology/image-space-capsule-landscape.jpg';
+      desktopImg .src = 'assets/technology/image-space-capsule-portrait.jpg';
+      navTech3.classList.add("active");
+      navTech1.classList.remove("active");
+      navTech2.classList.remove("active");
+    })
+}
+
+changeContentTech();
+
+  </script>
+</body>
+</html>
+
+
